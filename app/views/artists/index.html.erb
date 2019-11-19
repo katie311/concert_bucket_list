@@ -1,4 +1,4 @@
-<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<br/>
 <h2>Welcome <%= current_user.first_name %></h2>
 <hr />
 <%= link_to "Add Artist", new_artist_path %>
@@ -7,7 +7,20 @@
 <ul>
     <% @artists.each do |artist| %>
         <li>
-            <h6><%= artist.artist_name %> | Seen in Concert? <%= artist.seen_live %></h6>
+            <h6><strong><%= artist.artist_name %></strong> | <%= link_to 'Edit', edit_artist_path([@current_user, @artist]) %> | 
+                <%= link_to 'Delete', artist, method: :delete %> <h6>
+                <h6>Seen in Concert?
+                <div class="switch">
+                    <label>
+                        No
+                            <input type="checkbox" @artist.seen_live >
+                            <span class="lever"></span>
+                            Yes
+                    </label>
+                </div>
+            </h6>
         </li>
+        <br/>
     <% end %>
 </ul>
+<hr />

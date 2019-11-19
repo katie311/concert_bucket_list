@@ -1,2 +1,8 @@
-<h1>Artists#edit</h1>
-<p>Find me in app/views/artists/edit.html.erb</p>
+<h1>Edit Entry</h1>
+<%= form_for @artist do |f| %>
+    <div class = "field">
+        <%= f.label :artist_name %>
+        <%= f.text_field :artist_name, required: true, placeholder: "Artist Name" %>
+    </div>  
+         <%= f.submit class: "waves-effect waves-light btn" %>
+<% end %>

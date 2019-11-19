@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :set_artists, only: [:show, :edit, :update]
+  before_action :set_artist, only: [ :show, :edit, :update, :destroy ]
   
   def index
     @artists = current_user.artists

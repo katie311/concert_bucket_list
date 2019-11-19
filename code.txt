@@ -1,0 +1,12 @@
+form checkbox stuff
+
+    <div>
+        <form action="#">
+            <label>
+                <input type="checkbox" id="seen live?" />
+                    <span>
+                        <%= f.check_box :seen_live %>
+                        <%= f.label :seen_live, id: 'seen_live' %>
+                </span>
+            </label>  
+        </div>    
