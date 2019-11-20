@@ -7,7 +7,7 @@
 <ul>
     <% @artists.each do |artist| %>
         <li>
-            <h6><strong><%= artist.artist_name %></strong> | <%= link_to 'Edit', edit_artist_path([@current_user, @artist]) %> | 
+            <h6><strong><%= artist.artist_name %></strong> | <%= link_to 'Edit', edit_artist_path(artist) %> | 
                 <%= link_to 'Delete', artist, method: :delete %> <h6>
                 <h6>Seen in Concert?
                 <div class="switch">
